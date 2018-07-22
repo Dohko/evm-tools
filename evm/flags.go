@@ -87,12 +87,12 @@ var (
 	FromFlag = cli.StringFlag{
 		Name:  "from",
 		Usage: "address sending the call",
-		Value: common.StringToAddress("sender").Hex(),
+		Value: common.NewAddressFromHex("sender").Hex(),
 	}
 	ToFlag = cli.StringFlag{
 		Name:  "to",
 		Usage: "destination address receiving the call",
-		Value: "", //common.StringToAddress("receiver").Hex(),
+		Value: "", //common.NewAddressFromHex("receiver").Hex(),
 	}
 
 	// state options
@@ -114,7 +114,7 @@ var (
 	CoinbaseFlag = cli.StringFlag{
 		Name:  "coinbase",
 		Usage: "set coinbase address",
-		Value: common.StringToAddress("coinbase").Hex(),
+		Value: common.NewAddressFromHex("coinbase").Hex(),
 	}
 	DifficultyFlag = cli.StringFlag{
 		Name:  "difficulty",
